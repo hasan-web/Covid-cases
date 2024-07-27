@@ -6,7 +6,7 @@ import { HttpClient } from '@angular/common/http';
   providedIn: 'root'
 })
 export class CovidService implements OnInit{
-  apiUrl = 'https://coronavirus-19-api.herokuapp.com/';
+  apiUrl = 'https://www.worldometers.info/coronavirus/';
 
   constructor(private http:HttpClient) { }
   ngOnInit() {
@@ -14,7 +14,7 @@ export class CovidService implements OnInit{
     this.getCountries()
    }
   getAll() {
-    return this.http.get(`${this.apiUrl}all`, );
+    return this.http.get(`${this.apiUrl}`, );
   }
 
   getCountries() {
